@@ -1,0 +1,28 @@
+class RationalAgent:
+
+    def decide_action(self, exam_near, energy_level):
+
+        if exam_near and energy_level > 5:
+            return "Study for Exam"
+
+        elif exam_near and energy_level <= 5:
+            return "Take Short Rest and Study"
+
+        elif not exam_near and energy_level > 5:
+            return "Practice Coding"
+
+        else:
+            return "Relax"
+
+
+# Creating Agent
+agent = RationalAgent()
+
+# Inputs
+exam_near = True
+energy_level = 7
+
+# Decision
+action = agent.decide_action(exam_near, energy_level)
+
+print("Agent Decision:", action)
