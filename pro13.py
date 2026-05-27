@@ -1,6 +1,0 @@
-def add():
-    c=a+b
-    print(c)
-a=10    
-b=20
-add()
